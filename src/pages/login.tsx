@@ -51,7 +51,7 @@ const LoginComponent = ({ }) => {
               <Button mt={4} type='submit'
                 colorScheme={'teal'}
                 isLoading={isSubmitting}
-              >register</Button>
+              >Login</Button>
             </Form>
           </Wrapper>
         )
