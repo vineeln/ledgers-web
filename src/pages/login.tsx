@@ -9,11 +9,13 @@ import { Footer } from '../components/Footer';
 import { useLoginMutation } from '../generated/graphql';
 import { toErrorMap } from '../utils/utils';
 import { InputField } from '../components/InputField';
+import { NavBar } from '../components/NavBar';
 
 const Login = () => {
   return (
+    <>
+    <NavBar></NavBar>
     <Container height="100vh">
-      <Hero title="Login W3 ledgers" />
       <LoginComponent />
 
       <DarkModeSwitch />
@@ -21,6 +23,7 @@ const Login = () => {
         <Text>❤️ Neo Ledgers</Text>
       </Footer>
     </Container>
+    </>
   );
 }
 
@@ -33,6 +36,7 @@ const LoginComponent = ({ }) => {
       initialValues={{ username: "", password: "" }}
       onSubmit={async (values,{setErrors}) => {
         const response = await loginRequest(values)
+        console.log(response.operation.context);
         if( response.data?.login.errors ) {
           setErrors(toErrorMap(response.data.login.errors))
         } else {

@@ -9,11 +9,13 @@ import { Footer } from '../components/Footer';
 import { useRegisterMutation } from '../generated/graphql';
 import { toErrorMap } from '../utils/utils';
 import { InputField } from '../components/InputField';
+import { NavBar } from '../components/NavBar';
 
 const Register = () => {
   return (
-    <Container height="100vh">
-      <Hero title="Register W3 ledgers" />
+    <>
+    <NavBar/>
+    <Container height="100vh">      
       <RegisterComponent />
 
       <DarkModeSwitch />
@@ -21,6 +23,7 @@ const Register = () => {
         <Text>❤️ Neo Ledgers</Text>
       </Footer>
     </Container>
+    </>
   );
 }
 
@@ -34,6 +37,7 @@ const RegisterComponent = ({ }) => {
       onSubmit={async (values,{setErrors}) => {
         console.log(values);
         const response = await register(values)
+        console.log(response.operation.context);
         if( response.data?.register.errors ) {
           setErrors(toErrorMap(response.data.register.errors))
         } else {
