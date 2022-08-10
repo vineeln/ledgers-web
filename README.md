@@ -1,21 +1,31 @@
 
 # Running it
+
+```bash
 $ yarn install
+
+```
+```bash
 $ yar dev;  //http://localhost:3000
+```
 
 # chakra react-app guide
 https://chakra-ui.com/getting-started/cra-guide
 
 # Some Dashboards
-##Orbit
+
+## Orbit
 https://github.com/chenkie/orbit
 
-##dashboard: horizon
+## dashboard: horizon
 https://github.com/horizon-ui/horizon-ui-chakra
 
-##dashboard: purity
+## dashboard: purity
+
 https://github.com/vineeln/purity-ui-dashboard
+
 https://www.creative-tim.com/product/purity-ui-dashboard?ref=readme-pud
+
 https://demos.creative-tim.com/purity-ui-dashboard/?_ga=2.126177157.940624823.1659505962-1444183135.1659505962#/admin/dashboard
 
 # Example app with [chakra-ui](https://github.com/chakra-ui/chakra-ui) and TypeScript
